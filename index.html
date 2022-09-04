@@ -8,7 +8,38 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <div class="add-playlist"> <img src="./images/add.png" alt=""></div>
+
+    <div class="card">
+        <h2 class="album-title">Here are some songs!</h2>
+        <div class="actions">
+            <button class="play-album"><img src="./images/play.png" alt=""></button>
+            <button class="add-song"><img src="./images/add.png" alt=""></button>
+            <button class="share-album"><img src="./images/share.png" alt=""></button>
+            <button class="delete album"><img src="./images/delete.png" alt=""></button>
+        </div>
+        <div class="songs"></div>
+    </div>
+
+    <div class="form">
+        <form action="" method="post">
+            <label for="title"> Title </label>
+            <input class = "song-input" id= "title" type="text">
+            <label for="artist"> Artist</label>
+            <input class = "song-input" id= "artist" type="text">
+            <label for="album"> Album</label>
+            <input class = "song-input" id= "album" type="text">
+            <label for="url"> url </label>
+            <input class = "song-input" id="url" type="text">            
+            <button type="submit"> add song!</button>
+        </form>
+    </div>
+    <div class="form playlist-form">
+        <form action="">
+            <input type="text" class="title">
+        </form>
+    </div>
 </body>
 <script src="./script.js"></script>
 </html>
