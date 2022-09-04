@@ -1,6 +1,9 @@
 const addPlaylist = document.querySelector('.add-playlist');
 const playlistForm = document.querySelector('.playlist-form');
-const removeFormButt = document.querySelectorAll('.close-form')
+const removeFormButt = document.querySelectorAll('.close-form');
+const playlistName = document.getElementById('playlistName');
+const submitName = document.getElementById('submit-name');
+
 
 const addSong = document.querySelectorAll('.add-song');
 const form = document.querySelector('form');
@@ -13,7 +16,7 @@ const songs = document.querySelector('.songs');
 // Functions!
 
 function askTitle(){
-    playlistForm.classList.add('front-center')
+    playlistForm.classList.add('front-center');
 }
 
 const removeForm = function(e){
@@ -21,12 +24,17 @@ const removeForm = function(e){
     formEl.classList.remove('front-center');
 }
 
+const makeCard = function(name){
+    console.log(name);
+}
+
 function Song (title, artist, album, url) {
     this.title = title;
     this.artist = artist;
     this.album = album;
-    this.url = url 
+    this.url = url;
 }
+
 
 const songDivMaker = function(title, artist, album, url) {
     // declare newSong with inputs, a dive to place a link inside and the link + a button to remove that song
@@ -59,13 +67,21 @@ const removeSong = function(e){
 }
 
 
+// form listeners
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     songDivMaker(titleIn.value, artistIn.value, albumIn.value, urlIn.value);
 });
 
-addPlaylist.addEventListener('click', askTitle);
+playlistForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    makeCard(playlistName.value);
+})
 
+submitName.addEventListener('click', removeForm);
+
+// listeners for adding a playlist
+addPlaylist.addEventListener('click', askTitle);
 removeFormButt.forEach(butt => butt.addEventListener('click', removeForm))
 
 
