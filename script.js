@@ -1,5 +1,6 @@
-const addPlaylist = document.querySelector('add-playlist');
-const playlist = document.querySelector('.playlist-form')
+const addPlaylist = document.querySelector('.add-playlist');
+const playlistForm = document.querySelector('.playlist-form');
+const removeFormButt = document.querySelectorAll('.close-form')
 
 const addSong = document.querySelectorAll('.add-song');
 const form = document.querySelector('form');
@@ -9,9 +10,17 @@ const albumIn = document.getElementById ('album');
 const urlIn = document.getElementById ('url');
 const songs = document.querySelector('.songs');
 
-function moveAskTitle(){
-    
+// Functions!
+
+function askTitle(){
+    playlistForm.classList.add('front-center')
 }
+
+const removeForm = function(e){
+    const formEl = e.target.parentNode.parentNode
+    formEl.classList.remove('front-center');
+}
+
 function Song (title, artist, album, url) {
     this.title = title;
     this.artist = artist;
@@ -55,8 +64,9 @@ form.addEventListener('submit', function(e) {
     songDivMaker(titleIn.value, artistIn.value, albumIn.value, urlIn.value);
 });
 
-addPlaylist.addEventListener('click', askTitle)
+addPlaylist.addEventListener('click', askTitle);
 
+removeFormButt.forEach(butt => butt.addEventListener('click', removeForm))
 
 
 
