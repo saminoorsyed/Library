@@ -1,4 +1,0 @@
-add: <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Fuzzee - Flaticon</a>
-delete: <a href="https://www.flaticon.com/free-icons/x" title="x icons">X icons created by Stockio - Flaticon</a>
-play: <a href="https://www.flaticon.com/free-icons/play-button" title="play button icons">Play button icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/share" title="share icons">Share icons created by Freepik - Flaticon</a>

@@ -3,40 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
 <body>
-
-    <div class="dash">
+    <div class="layout">
+        <div class="sidebar">
+            <h1 id="dash-title"> <img src="./images/dashboard/dashboard.png"></img> Dashboard</h1>
+            <div class="personal">
+                <a href="#" class="navigate"><img src="./images/dashboard/home.png" alt="Home"> Home</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/user.png">Profile</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/messages.png" alt="Messages"> Messages</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/history.png" alt="History"> History</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/tasks.png" alt="tasks"> Tasks</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/groups.png" alt="groups"> Groups</a>
+            </div>
+            <div class="account">
+                <a href="#" class="navigate"><img src="./images/dashboard/settings.png" alt="settings"> Settings</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/help.png" alt="Help"> Help</a>
+                <a href="#" class="navigate"><img src="./images/dashboard/privacy.png" alt="privacy"> Privacy</a>
+            </div>
+        </div>
+        <div class="header">
+            <div id="search">
+                <img src="./images/dashboard/search.png" alt="search"> 
+                <input type="text">
+            </div>
+            <div class="head-nav">
+                <img id="notification" src="./images/dashboard/notifications.png" alt="notifications">
+                <img id='profile' src="./images/profiles/Totoro.webp" alt="Totoro">
+                <a>Totoro</a>
+                <button><a href="">New</a></button>
+                <button><a href="">upload</a></button>
+                <button><a href="">share</a></button>
+            </div>
+            <div class="hello">
+                <img id='profile' src="./images/profiles/Totoro.webp" alt="Totoro">
+                <div class="hi">
+                    <p>Hi there,</p>
+                    <h3>Totoro Ghibli (@Totoro)</h3>
+                </div>
+            </div>
+        </div>
         <div class="content">
-            <div class="add-playlist"> <img src="./images/add.png" alt=""></div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> 
+                    <a href="https://www.flaticon.com/free-icons/message" title="message icons">Message icons created by Arafat Uddin - Flaticon</a>
+                     <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by joalfa - Flaticon</a>
+                </p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> 
+                    <a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+                </p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> 
+                    <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Kiranshastry - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by SBTS2018 - Flaticon</a>
+                </p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p>  <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a>
+                     <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a>
+                </p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> 
+                     <a href="https://www.flaticon.com/free-icons/privacy" title="privacy icons">Privacy icons created by deemakdaksina - Flaticon</a>
+                </p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> <a href="https://ghibli.fandom.com/"> Studio Ghibli character portraits from Ghibli wiki fandom site: https://ghibli.fandom.com/</a></p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> A whole bunch of random text that should go on and on and on and on and on and on and on and on for a very long while until I get tired of typing...</p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+            <div class="card">
+                <h4>Attributions</h4>
+                <p> A whole bunch of random text that should go on and on and on and on and on and on and on and on for a very long while until I get tired of typing...</p>
+                <div class="card-action">
+                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
+                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
+                </div>            
+            </div>
+        </div>
+    <div class="current">
+        <div class="announcements">
+            <h3 class="title">Announcements</h3>
+            <div class="a-updated">
+                <div class="announcement">
+                    <h4 class="ATitle">Watch out!</h4>
+                    <p>A whole bunch of random text that should go on and on and on for a very long while until I get tired of typing...</p>
+                </div>
+                <div class="announcement">
+                    <h4 class="ATitle"> This is very important.</h4>
+                    <p>A whole bunch of random text that should go on and on and on for a very long while until I get tired of typing...</p>
+                </div>
+                <div class="announcement">
+                    <h4 class="ATitle"> Do you even read these?</h4>
+                    <p>A whole bunch of random text that should go on and on and on for a very long while until I get tired of typing...</p>
+                </div>
+            </div>
+        </div>
+        <div class="trending">
+            <h3 class="title"> Trending</h3>
+            <div class="t-updated">
+                <div class="trend">
+                    <img src="./images/profiles/chihiro.webp" alt="Chihiro">
+                    <div class="msg">
+                        <p>@Chihiro</p>
+                        <p>Don't eat the food! </p>
+                    </div>
+                </div>
+                <div class="trend">
+                    <img src="./images/profiles/noFace.webp" alt="No Face">
+                    <div class="msg">
+                        <p>@NoFace</p>
+                        <p>Uhuh uhuh...</p>
+                    </div>
+                </div>
+                <div class="trend">
+                    <img src="./images/profiles/Kodama_Animation.webp" alt="Kodama">
+                    <p>@Kodama</p>
+                    <p> Getting my groove on :D</p>
+                </div>
+                <div class="trend">
+                    <img src="./images/profiles/Totoro.webp" alt="Totoro">
+                    <div class="msg">
+                        <p>@Totoro</p>
+                        <p>Yaaaaawn</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="form song-form">
-        <button  class="close-form"> <img src="./images/delete.png" alt="close form"></button>
-        <form action="" method="post">
-            <label for="title"> Title </label>
-            <input class = "song-input" id= "title" type="text">
-            <label for="artist"> Artist</label>
-            <input class = "song-input" id= "artist" type="text">
-            <label for="album"> Album</label>
-            <input class = "song-input" id= "album" type="text">
-            <label for="url"> url </label>
-            <input class = "song-input" id="url" type="text">            
-            <button type="submit"> add song!</button>
-        </form>
-    </div>
-    <div class="form playlist-form">
-        <button  class="close-form"> <img src="./images/delete.png" alt="close form"></button>
-        <form action="">
-            <label for="playlistName"> name your playlist!</label>
-            <input type="text" id="playlistName">
-            <button id = "submit-name" type="submit"> Enter </button>
-        </form>
-    </div>
+    
+    
 </body>
 <script src="./script.js"></script>
 </html>
