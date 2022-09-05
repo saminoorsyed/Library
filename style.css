@@ -183,10 +183,18 @@ button:hover {
     height: 130px;
 }
 
-p>a {
-    color: black;
-    font-size: 1rem;
-    text-shadow: none;
+.card-action>button {
+    margin-right: 10px;
+    background-color: buttonFace;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+button>img {
+    height: 1rem;
+    width:1rem;
 }
 
 /* current section */
@@ -263,8 +271,8 @@ form {
     position: fixed;
     top: 500%;
     left:50%;
-    height: 350px;
-    width: 250px;
+    height: 550px;
+    width: 350px;
     background-color: #ecfeff;
     box-shadow: 0 1px 5px;
     display: flex;
@@ -274,6 +282,17 @@ form {
     align-items: center;
 
 }
+
+.form-title {
+    display: flex;
+    gap: 40px;
+}
+
+.form-title> button {
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
 .front-center{
     position: fixed;
     top: 25%;

@@ -31,15 +31,15 @@
         <div class="header">
             <div id="search">
                 <img src="./images/dashboard/search.png" alt="search"> 
-                <input type="text">
+                <input required type="text">
             </div>
             <div class="head-nav">
                 <img id="notification" src="./images/dashboard/notifications.png" alt="notifications">
                 <img id='profile' src="./images/profiles/Totoro.webp" alt="Totoro">
                 <a>Totoro</a>
-                <button onclick= "moveForm()" id="add-book">New</button>
-                <button><a href="">upload</a></button>
-                <button><a href="">share</a></button>
+                <button onclick= "moveForm()" id="add-book">Add a Book!</button>
+                <button>upload</button>
+                <button>share</button>
             </div>
             <div class="hello">
                 <img id='profile' src="./images/profiles/Totoro.webp" alt="Totoro">
@@ -50,14 +50,6 @@
             </div>
         </div>
         <div class="content">
-            <div class="card">
-                <h4>Book title</h4>
-                <p> A whole bunch of random text that should go on and on and on and on and on and on and on and on for a very long while until I get tired of typing...</p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
         </div>
     <div class="current">
         <div class="announcements">
@@ -110,16 +102,23 @@
         </div>
     </div>
 <div class="form">
-    <h2> Add a New Book!</h2>
+    <div class="form-title">
+        <h2> Add a New Book!</h2>
+        <button onclick="moveForm()"><img src="./images/dashboard/clear.png" alt=""></button>
+    </div>
     <form id="submitBook" action="" method="post">
         <label for="title">title</label>
-        <input id="title" type="text" placeholder="Title">
+        <input required id="title" type="text" placeholder="Title">
         <label for="author">Author</label>
-        <input id="author" type="text" placeholder="Author">
+        <input required id="author" type="text" placeholder="Author">
         <label for="pages">Pages</label>
-        <input id="pages" type="number" placeholder="pages">
-        <input id= "is-read" type="checkbox">
-        <label for="is-read">read it?</label>
+        <input required id="pages" type="number" placeholder="pages">
+        <div class="checkboxwrap">
+            <input id= "is-read" type="checkbox">
+            <label for="is-read">read it?</label>
+        </div>
+        <label for="text-area"> Leave a review?</label>
+        <textarea required name="" id="text-area" cols="30" rows="10" placeholder="write a review or a goal!"></textarea>
         <button type="submit"> Add book </button>
     </form>
 </div>    

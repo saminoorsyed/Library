@@ -2,7 +2,6 @@ const content = document.querySelector('.content');
 const addBookButt = document.getElementById('add-book');
 const addForm = document.querySelector('.form');
 const submitBook = document.getElementById('submitBook');
-
 // constructors
 
 class Book {
@@ -11,12 +10,19 @@ class Book {
         author = 'unknown',
         pages = 'unknown',
         isRead = false,
+        review = 'not reviewed yet',
     ) {
-        this.title = title
+        this.title = title 
         this.author = author
         this.pages = pages
         this.isRead = isRead
+        this.review = review
     }
+}
+
+Book.prototype.toggleRead = function() {
+    this.isRead = !this.isRead
+    displayBooks()
 }
 
 class Library {
@@ -28,7 +34,8 @@ class Library {
     }
 
     removeBook(title) {
-        this.books.filter((book) => book.title !== title)
+        this.books = this.books.filter((book) => book.title !== title)
+        
     }
 
     getBook(title) {
@@ -46,7 +53,6 @@ const library = new Library();
 
 const moveForm = () => {
     addForm.classList.toggle('front-center');
-    console.log('hello')
 }
 
 
@@ -57,7 +63,8 @@ const getBookInput = ()=>{
     const author = document.getElementById('author').value
     const pages = document.getElementById('pages').value
     const isRead = document.getElementById('is-read').checked
-    return new Book(title, author, pages, isRead)
+    const review = document.getElementById('text-area').value
+    return new Book(title, author, pages, isRead, review)
 }
 
 const addBook = (e) => {
@@ -65,12 +72,75 @@ const addBook = (e) => {
     const newBook = getBookInput()
 
     if (library.isInLibrary(newBook)) {
-        alert('this book is already in your library');
+        alert('this book is already in your library')
         return
     }
-    library.addBook(newBook);
-
-    console.log(library.books);
+    library.addBook(newBook)
+    submitBook.reset()
+    moveForm()
+    displayBooks()
 }
 
-submitBook.onsubmit = addBook;
+
+submitBook.onsubmit = addBook
+
+
+const displayBooks = ()=> {
+    content.innerHTML='';
+    library.books.forEach(book => {
+        const card = document.createElement('div');
+        const bookActions = document.createElement("div")
+        card.classList.add('card')
+        bookActions.classList.add("card-action")
+
+        card.innerHTML= `
+                <h4>${book.title} by ${book.author}, ${book.pages} pages</h4>
+                <p> ${book.review}</p>      
+            `;
+        content.appendChild(card);
+
+        const favorite = document.createElement('button')
+        const deleteCard = document.createElement('button')
+        const finished = document.createElement('button')
+        const favImg = document.createElement('img')
+        const delImg = document.createElement('img')
+        const readIt = document.createElement('img')
+
+        favImg.src = "./images/dashboard/favorite.png";
+        delImg.src = "./images/dashboard/clear.png"
+
+        if (book.isRead) {
+            readIt.src = "./images/dashboard/tick.png"
+            finished.textContent = 'finished'
+        }else{
+            readIt.src = "./images/dashboard/open-book.png"
+            finished.textContent = 'still reading'
+        }
+
+        deleteCard.appendChild(delImg)
+        favorite.appendChild(favImg)
+        // trigger card to delete and store data-title so that title can be passed to remove function
+        deleteCard.onclick = removeBook
+        deleteCard.dataset.title = book.title
+
+        finished.onclick = book.toggleRead.bind(book)
+        finished.dataset.title = book.title
+
+        bookActions.appendChild(favorite)
+        bookActions.appendChild(deleteCard)
+        
+        finished.appendChild(readIt)
+        bookActions.appendChild(finished)
+
+        card.appendChild(bookActions)
+    });
+}
+
+const removeBook = (e) => {
+    const titleToRemove = e.target.parentNode.dataset.title;
+    library.removeBook(titleToRemove);
+    displayBooks();
+}
+
+// <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
+// <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
