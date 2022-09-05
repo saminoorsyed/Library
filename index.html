@@ -37,7 +37,7 @@
                 <img id="notification" src="./images/dashboard/notifications.png" alt="notifications">
                 <img id='profile' src="./images/profiles/Totoro.webp" alt="Totoro">
                 <a>Totoro</a>
-                <button><a href="">New</a></button>
+                <button onclick= "moveForm()" id="add-book">New</button>
                 <button><a href="">upload</a></button>
                 <button><a href="">share</a></button>
             </div>
@@ -51,87 +51,10 @@
         </div>
         <div class="content">
             <div class="card">
-                <h4>Attributions</h4>
-                <p> 
-                    <a href="https://www.flaticon.com/free-icons/message" title="message icons">Message icons created by Arafat Uddin - Flaticon</a>
-                     <a href="https://www.flaticon.com/free-icons/history" title="history icons">History icons created by joalfa - Flaticon</a>
-                </p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p> 
-                    <a href="https://www.flaticon.com/free-icons/home-button" title="home button icons">Home button icons created by Freepik - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
-                </p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p> 
-                    <a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Kiranshastry - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by SBTS2018 - Flaticon</a>
-                </p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p>  <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a>
-                     <a href="https://www.flaticon.com/free-icons/question" title="question icons">Question icons created by Freepik - Flaticon</a>
-                </p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p> 
-                     <a href="https://www.flaticon.com/free-icons/privacy" title="privacy icons">Privacy icons created by deemakdaksina - Flaticon</a>
-                </p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p> <a href="https://ghibli.fandom.com/"> Studio Ghibli character portraits from Ghibli wiki fandom site: https://ghibli.fandom.com/</a></p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
+                <h4>Book title</h4>
                 <p> A whole bunch of random text that should go on and on and on and on and on and on and on and on for a very long while until I get tired of typing...</p>
                 <div class="card-action">
                     <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
-                    <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
-                </div>            
-            </div>
-            <div class="card">
-                <h4>Attributions</h4>
-                <p> A whole bunch of random text that should go on and on and on and on and on and on and on and on for a very long while until I get tired of typing...</p>
-                <div class="card-action">
-                    <a href=""><img src="./images/dashboard/favorite.png" alt="favorite"></a>
-                    <a href=""><img src="./images/dashboard/add.png" alt="follow"></a>
                     <a href=""><img src="./images/dashboard/share.png" alt="share"></a>
                 </div>            
             </div>
@@ -186,7 +109,20 @@
             </div>
         </div>
     </div>
-    
+<div class="form">
+    <h2> Add a New Book!</h2>
+    <form id="submitBook" action="" method="post">
+        <label for="title">title</label>
+        <input id="title" type="text" placeholder="Title">
+        <label for="author">Author</label>
+        <input id="author" type="text" placeholder="Author">
+        <label for="pages">Pages</label>
+        <input id="pages" type="number" placeholder="pages">
+        <input id= "is-read" type="checkbox">
+        <label for="is-read">read it?</label>
+        <button type="submit"> Add book </button>
+    </form>
+</div>    
     
 </body>
 <script src="./script.js"></script>
