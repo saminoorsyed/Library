@@ -6,13 +6,40 @@ const albumIn = document.getElementById ('album');
 const urlIn = document.getElementById ('url');
 const songs = document.querySelector('.songs');
 
-function Song (title, artist, album, url) {
-    this.title = title;
-    this.artist = artist;
-    this.album = album;
-    this.url = url;
+class Song {
+    constructor ( 
+        title = 'unknown',
+        artist = 'unknown',
+        album = 'unknown',
+        url = 'unknown',
+    ) {
+        this.title = title
+        this.artist = artist
+        this.album = album
+        this.url = url
+    }
 }
 
+class Playlist {
+    constructor() {
+        this.songs = []
+    }
+    addSong(newSong) {
+        this.songs.push(newSong)
+    }
+
+    removeSong(title) {
+        this.songs.filter((song) => song.title !== title)
+    }
+
+    getSong(title) {
+        return this.songs.find((song) => song.title === title)
+    }
+
+    isInPlaylist(newSong) {
+        return this.songs.some((song)=> song.title === newSong.title)
+    }
+}
 
 const songDivMaker = function(title, artist, album, url) {
     // declare newSong with inputs, a dive to place a link inside and the link + a button to remove that song
